@@ -1,0 +1,23 @@
+.o_list_view {
+    background-color: transparent;
+    > thead {
+        background-color: transparent;
+        color: @title-color;
+    }
+    tfoot {
+        cursor: default;
+        color: #4c4c4c;
+        background-color: transparent;
+        font-weight: bold;
+        border-top: 1px solid @border-line-color;
+        border-bottom: 1px solid @border-line-color;
+    }
+    &.o_list_view_grouped > tbody > tr.o_group_header {
+        background-color: @panel-background-color;
+        box-shadow: inset 0 2px 0 @border-line-color;
+        &.table-striped > tbody + tbody > tr:not(.o_group_header):nth-of-type(odd) {
+            background-color: @panel-background-color;
+        }
+    }
+}
+

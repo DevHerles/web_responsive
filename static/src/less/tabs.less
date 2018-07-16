@@ -1,0 +1,40 @@
+.nav > li > {
+    a:hover,
+    a:focus {
+        background-color: transparent;
+        color: @primary-color;
+        border-top: 1px solid @primary-color;
+        border-bottom: 1px solid @panel-background-color;
+        border-left: 1px solid @border-line-color;
+        border-right: 1px solid @border-line-color;
+    }
+}
+.tab-content {
+    > .active {
+        padding: 0 10px;
+    }
+    .nav {
+        li {
+            > a {
+                &:focus,
+                &:hover {
+                    background: red !important;
+                }
+            }
+        }
+        .nav-tabs {
+            border-left: 1px solid @border-line-color;
+            border-right: 1px solid @border-line-color;
+            > li {
+                > a {
+                    color: @body-color;
+                    &:hover,
+                    &:focus {
+                        color: @primary-color;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

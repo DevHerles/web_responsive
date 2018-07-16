@@ -1,0 +1,71 @@
+.o_mail_thread {
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 4px;
+        background: @border-line-color;
+        top: 0px;
+        bottom: 0;
+        margin-left: 38px;
+    }
+    .o_thread_date_separator {
+        margin-left: 40px;
+        border-bottom: solid @border-line-color 1px;
+        .o_thread_date {
+            background: @border-line-color;
+            padding: 5px 20px;
+            // color: @title-color;
+        }
+    }
+    .o_thread_message {
+        .o_thread_message_core {
+            pre {
+                color: inherit;
+                a:hover {
+                    color: @primary-color;
+                }
+                background: transparent;
+                border: 1px solid @border-line-color;
+            }
+        }
+        .o_thread_message_core.o_mail_note {
+            background-color: transparent;
+            border-bottom: 1px solid @border-line-color;
+        }
+        .o_thread_message_sidebar {
+            position: relative;
+            .o_thread_message_avatar {
+                max-width: 50px;
+                border: 2px solid @border-line-color;
+                -webkit-border-radius: 50%!important;
+                -moz-border-radius: 50%!important;
+                border-radius: 50%!important;
+            }
+        }
+        .o_mail_info {
+            color: @title-color !important;
+            > strong {
+                color: @primary-color;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.o_mail_chat { 
+    .o_mail_chat_content {
+        background: transparent;
+        .o_chat_composer {
+            border-top: 1px solid #E5E5E5;
+            background-color: #F9F9F9;
+            position: relative;
+            .o_composer {
+                .o_composer_text_field {
+                    background: transparent;
+                    color: @title-color;
+                }
+            }
+        }
+    }
+}

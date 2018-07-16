@@ -1,0 +1,101 @@
+.modal {
+    .modal-content {
+        background-color: @form-sheet-background;
+        .modal-header {
+            background: @modal-header-background;
+            border-bottom-color: @border-line-color;
+            .close {
+                color: @primary-color;
+                opacity: inherit;
+                text-shadow: 0 1px 0 @primary-color;
+            }
+            .modal-title {
+                color: @modal-title-color;
+            }
+        }
+        .o_error_detail {
+            pre {
+                color: @primary-color;
+                background: transparent;
+                border: 1px solid @border-line-color;
+            }
+        }
+        .modal-body {
+            color: @primary-color;
+            background: @modal-body-background;
+            .oe_form_box_info {
+                background-color: @secondary-color;
+                color: @title-color;
+            }
+            .o_kanban_view {
+                .o_kanban_record, 
+                .o_kanban_quick_create {
+                    .oe_kanban_details {
+                        color: @title-color;
+                    }
+                }
+            }
+            .o_form_sheet {
+                background: @modal-body-background !important;
+                .nav-tabs {
+                    > li.active > a {
+                        border-bottom: 1px solid @modal-body-background !important
+                    }
+                }
+            }
+            .table {
+                padding: 10px 10px;
+                color: @field-color;
+                tbody {
+                    tr:hover {
+                        td {
+                            color: @primary-color;
+                            border-bottom: 1px dotted @primary-color;
+                            border-top: 1px dotted @primary-color;
+                        }
+                        
+                    }
+                }
+            }
+            .table tfoot tr td {
+                border-top-color: @border-line-color;
+                border-bottom-color: @border-line-color;
+            }
+            .panel-heading {
+                background-color: @form-sheet-background;
+                border: 1px solid;
+            }
+            .note-editor {
+                border: 1px solid @border-line-color;
+                .panel-default {
+                    > .panel-heading {
+                        background: @panel-background-color;
+                    }
+                }
+                .note-editable {
+                    background: @form-sheet-background;
+                    color: @form-input-color !important;
+                    border: 1px solid @border-line-color;
+                }
+                .note-statusbar {
+                    background: @panel-background-color;
+                    color: @form-input-color !important;
+                }
+            }
+            input {
+                background: @input-background-color;
+                border: 1px solid @border-line-color;
+                color: @input-color;
+                &:focus,
+                &:hover {
+                    transition: @input-transition;
+                    border-color: @primary-color !important;
+                }
+            }
+        }
+        .modal-footer {
+            background: @modal-footer-background;
+            border-top-color: @border-line-color;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.o_control_panel {
+    background-color: @panel-background-color;
+    border-bottom: 1px solid @border-line-color;
+    
+    .breadcrumb {
+        background-color: transparent;
+        background: transparent;
+        > li > a {
+            color: @primary-color;
+            text-transform: uppercase;
+            font-size: @breadcrumb-font-size;
+            &:hover {
+                color: @secondary-color;
+            }
+        }
+        > .active {
+            color: @breadcrumb-active-color;
+            text-transform: uppercase;
+            font-size: @breadcrumb-font-size;
+        }
+    }
+}

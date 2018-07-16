@@ -1,0 +1,419 @@
+/* Copyright 2016 Ponto Suprimentos Ltda.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+ .o_form_button_save {
+    color: #fff;
+    background-color: #188ae2;
+    border-color: #188ae2;
+ }
+ .o_list_button_add {
+    color: #fff;
+    background-color: #31ce77;
+    border-color: #31ce77;
+ }
+ .o_form_button_cancel {
+    color: #fff;
+    background-color: #f34943;
+    border-color: #f34943;
+ }
+ .o_form_view .o_form_field_many2one,
+ .o_form_view .o_form_field_many2manytags,
+ .o_form_view .o_form_field_percent_pie,
+ .o_form_view .o_form_field_monetary,
+ .o_form_view .o_form_field_date,
+ .o_form_view .o_form_field_binary_file {
+     padding: 0px !important;
+ }
+.o_form_view .o_group.o_inner_group > tbody > tr > td span.o_form_field,
+.o_form_view .o_group.o_inner_group > tbody > tr > td .o_form_field_boolean.o_form_field,
+.o_form_view .o_group.o_inner_group > tbody > tr > td .oe_avatar.o_form_field,
+.o_form_view .o_group.o_inner_group > tbody > tr > td .o_form_uri.o_form_field {
+    width: auto;
+    border: 0px solid red !important;
+}
+.o_form_view .o_group.o_inner_group.oe_subtotal_footer .oe_subtotal_footer_separator {
+    border-top: 1px solid @border-line-color;
+}
+.o_form_view {
+    background-color: @panel-background-color;
+    > header {
+        border-bottom: 1px solid @border-line-color !important;
+        background-image: none;
+        background: @panel-background-color;
+        > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
+            color: @primary-color;
+            border-color: transparent;
+            background-color: transparent;
+            &:hover {
+                border: 1px solid @primary-color;
+                color: @button-hover-color !important;
+                background-color: transparent;
+            }
+        }
+        ul.oe_form_status {
+            /* text-transform: lowercase; */
+            font-size: 12px;
+            li {
+                background: transparent;
+                > .label {
+                    text-shadow: unset;
+                    color: @form-input-color;
+                }
+                > .arrow { 
+                    background: @panel-background-color;
+                    span {
+                        background: @panel-background-color;
+                        border: 1px solid @primary-color;
+                    }
+                }
+                &:first-child {
+                    .label {
+                        border-left: 1px solid @border-line-color;
+                    }
+                }
+                &:last-child {
+                    border-right: 1px solid @border-line-color;
+                }
+            }
+            li.oe_active {
+                border: unset;
+                background: @border-line-color;
+                > .arrow span {
+                    background: @border-line-color !important;
+                    border: 1.5px solid @primary-color;
+                }
+                > .label {
+                    /* border-left: 0.5px solid @primary-color !important;
+                    border-top: 0.5px solid @primary-color !important;
+                    border-bottom: 0.5px solid @primary-color !important; */
+                    border: 1px solid @primary-color !important;
+                }
+            }
+            li > .arrow span {
+                z-index: 1;
+            }
+        }
+    }
+    &.o_form_editable {
+        .o_form_field_many2manytags {
+            padding: 0px;
+        }
+        .o_group {
+            .o_form_textarea,
+            .o_form_input,
+            .o_form_field {
+                border: 1px solid transparent;
+                background: transparent;
+                border-radius: 0px;
+                color: @field-color;
+                padding: .375rem .75rem;
+            }
+        }
+    }
+    .oe_title {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        margin-top: 40px;
+    }
+    .oe_avatar {
+        float: right;
+        > img {
+            box-shadow: none;
+            border: 1px solid @border-line-color;
+        }
+    }
+    .o_form_required.o_form_input {
+        /* background: @form-required-background !important; */
+        border-bottom: 1px solid @primary-color !important;
+        border-top: 1px solid @border-line-color;
+        border-left: 1px solid @border-line-color;
+        border-right: 1px solid @border-line-color;
+        color: @title-color !important;
+        background: @form-required-background !important;
+    }
+    // Form must fill 100% width in any size
+    .o_form_sheet_bg {
+        padding: @sheet-padding;
+        background: @body-background-color;
+        border-bottom: 1px solid @border-line-color;
+        .o_form_sheet {
+            min-width: auto;
+            max-width: 100%;
+            background: @panel-background-color;
+            border: 1px solid @body-background-color;
+            .o_list_view {
+                tbody tr:hover { 
+                    td { 
+                        color: @primary-color;
+                        border-top: 1px dotted @primary-color;
+                        border-bottom: 1px dotted @primary-color;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: @screen-sm-max) {
+            padding: 0;
+
+            .o_form_sheet {
+                border: none;
+            }
+        }
+    }
+    // No overflowing buttons or titles
+    .oe_button_box, .oe_title {
+        max-width: 100%;
+        box-shadow: inset 0 -1px 0 @border-line-color;
+    }
+    .oe_button_box {
+        width: initial;
+        text-align: right;
+        height: 44px;
+        box-shadow: inset 0 -1px 0 @border-line-color;
+        margin-top: -17px;
+        margin-left: -17px;
+        margin-right: -16px;
+        margin-bottom: 24px;
+        .oe_stat_button {
+            width: 142px !important;
+            height: 44px;
+            text-transform: capitalize;
+            background: transparent;
+            border: 1px solid @border-line-color;
+            &:hover {
+                background: @oe_stat-button-hover-background-color;
+                .oe_stat_text {
+                    color: @title-color;
+                }
+            }
+            .o_button_icon {
+                color: @body-color;
+                font-size: 22px;
+            }
+        }
+    }
+    .o_horizontal_separator {
+        color: #a5a7ab;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+        border-bottom: 1px dotted @primary-color;
+        background: transparent;
+    }
+    &.o_form_nosheet {
+        background: @body-background-color !important;
+    }
+    ul {
+        &.oe_form_status_clickable,
+        &.oe_form_status {
+            text-transform: uppercase;
+            li {
+                background-image: none;
+                &.oe_active {
+                    background-color: transparent;
+                    > .label {
+                        color: @primary-color;
+                        text-shadow: none;    
+                    }
+                }
+                > .arrow span, {
+                    background-color: @title-color;
+                    background: @title-color;
+                }
+            }
+        }
+
+    }
+    &.o_form_readonly {
+        .o_form_uri {
+            color: @primary-color;
+            &:hover {
+                color: @primary-color-dark-20;
+            }
+        }
+    }
+    .o_form_field {
+        .o_form_input {
+            background: transparent;
+            border: 0px solid @border-line-color !important;
+            color: yellow;
+            &:focus {
+                border-color: @primary-color;
+                transition: all .3s ease-in-out;
+            }
+            &:hover {
+                border-color: @primary-color;
+                transition: all .3s ease-out;
+                border-color: @primary-color !important;
+            }
+        }
+        &.o_form_field_many2one .o_external_button {
+            color: @primary-color;
+            &:hover {
+                background: transparent !important;
+                color: @secondary-color;
+            }
+        }
+        .o_form_field_image > .o_form_image_controls > .fa.o_select_file_button {
+            background: @primary-color;
+        }
+        margin-bottom: 0px;
+    }
+    .o_form_textarea {
+        background: transparent;
+        color: @field-color;
+        padding: .375rem .75rem;
+        border: 1px solid @border-line-color;
+        &:focus {
+            color: @field-color;
+            background-color: transparent;
+            border-color: @primary-color;
+            outline: none;
+            -webkit-box-shadow: 0 0 0 0.2rem @box-shadow;
+            box-shadow: 0 0 0 0.2rem @box-shadow;
+        }
+    }
+    .o_form_field .o_form_input:active,
+    .o_datepicker_input:focus,
+    .o_form_input_dropdown:focus {
+        > input {
+            border-bottom: unset !important;
+        }
+    }
+    @media (max-width: @screen-xs) {
+        .o_form_field > .o_form_input_dropdown {
+            width: 80%;
+        }
+    }
+    .o_group {
+        .o_form_textarea,
+        .o_form_input,
+        .o_form_field {
+            border: 1px solid @border-line-color;
+            background: transparent;
+            border-radius: 0px;
+            color: @field-color;
+            padding: .375rem .75rem;
+            width: 100%;
+        }
+        .o_form_textarea:focus,
+        .o_form_input:focus,
+        .o_form_field:focus {
+            color: @field-color;
+            background-color: transparent;
+            border-color: @primary-color;
+            outline: none;
+            -webkit-box-shadow: 0 0 0 0.2rem @box-shadow;
+            box-shadow: 0 0 0 0.2rem @box-shadow;
+        }
+        .o_td_label {
+            border-right: none;
+            .o_form_label {
+                font-weight: normal;
+                margin-right: 0px;
+                color: @body-color !important;
+                font-size: inherit;
+            }
+        }
+        &.o_inner_group > tbody > tr > td {
+            .note-editor > .note-toolbar {
+                // prevent wysiwyg editor buttons from expanding the screen
+                white-space: initial;
+            }
+        }
+        .o_form_field {
+            &:active {
+                > input {
+                    border-bottom: unset !important;
+                }
+            }
+            &:focus {
+                border-color: @primary-color;
+                transition: all .3s ease-in-out;
+            }
+        }
+        ul.oe_form_status li.oe_active {
+            background-color: transparent;
+            border: 1px solid @border-line-color;
+        }
+        // reduce form maximum columns for smaller screens
+        @media (max-width: @screen-xs-max) {
+            .o-generate-groups(12);
+            .o-generate-groups(@n, @i: 1) when (@i =< @n) {
+                .o_group_col_@{i} {
+                    width: 100%;
+                }
+                .o-generate-groups(@n, @i + 1);
+            }
+        }
+        // break field label into a separate line from field on small screens
+        @media (max-width: @screen-xs) {
+            &.o_inner_group {
+                display: block;
+                > tbody {
+                    display: block;
+                    > tr {
+                        margin-top: 8px;
+                        .o-flex-display();
+                        .o-flex-flow(row, wrap);
+                        > td {
+                            .o-flex(1, 0, auto);
+                            padding: 0;
+                            display: block;
+                            padding: 0;
+                            // odoo adds a `style="width: 100%"` by javascript
+                            // directly on the tag so we need `!important` here:
+                            width: auto!important;
+                            max-width: 100%;
+                            &.o_td_label {
+                                border-right: 0;
+                                // keep 6% space on line to fit checkboxes
+                                // see above about `!important`
+                                width: 94%!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav-tabs {
+        border-bottom: 1px solid @border-line-color;
+        > li.active > a,
+        > li.active > a:hover, 
+        > li.active > a:active, 
+        > li.active > a:focus {
+            border-top: 1px solid;
+            background-color: transparent;
+            color: @primary-color !important;
+            border-left: 1px solid @border-line-color;
+            border-right: 1px solid @border-line-color;
+            border-bottom: 1px solid @panel-background-color;
+        }
+    }
+    .table {
+        > tbody > tr > td {
+            border-top: 1px solid @border-line-color;
+        }
+    }
+    // Make image editing controls always available, instead of depending on resolution or hover
+    .o_form_field_image > .o_form_image_controls {
+        position: initial;
+        opacity: 1;
+        > .fa {
+            width: 50%;
+            padding: 6px;
+            margin: 0px;
+            text-align: center;
+        }
+        > .fa.o_select_file_button {
+            background: @odoo-brand-primary;
+        }
+        > .fa.o_clear_file_button {
+            background: @brand-danger;
+        }
+    }
+    // Adapt chatter widget to small viewports
+    .oe_chatter {
+        min-width: inherit;
+    }
+}

@@ -1,0 +1,27 @@
+
+.datepicker {
+    .table-condensed {
+        > thead {
+            background-color: @primary-color;
+            > tr:first-child th:hover {
+                color: @active-a-color;
+                background-color: @primary-color-dark-10;
+            }
+            > tr:last-child {
+                color: inherit;
+                background-color: @panel-background-color;
+            }
+        }
+        > tbody > {
+            tr > {
+                td.active {
+                    background-color: @primary-color;
+                }
+                td.today:before {
+                    background-color: transparent;
+                    border-bottom-color: @title-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2017 LasLabs Inc.
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<templates id="form_view" xml:space="preserve">
+
+    <t t-extend="FormView.buttons">
+        <t t-jquery="button[accesskey='a']" t-operation="attributes">
+            <attribute name="accesskey">e</attribute>
+        </t>
+    </t>
+
+    <!-- http://thememinister.com/template/theme/adminpage_black_v1.0/modals.html -->
+    <t t-extend="Dialog">
+        <t t-jquery="div[class='modal-dialog']" t-operation="attributes">
+            <attribute name="class">modal-dialog herles</attribute>
+        </t>
+    </t>
+
+    <t t-extend="FormView.buttons">
+        <t t-jquery="button.o_form_button_edit" t-operation="replace">
+            <button t-if="widget.is_action_enabled('edit')" type="button" class="btn btn-primary btn-sm o_form_button_edit" accesskey="a">
+                <div class="fa fa-lg fa-pencil o_button_icon"></div>
+                <span class="hidden-md hidden-sm hidden-xs">Edit</span>
+            </button>
+        </t>
+        <t t-jquery="button.o_form_button_create" t-operation="replace">
+            <button t-if="widget.is_action_enabled('create')" type="button" class="btn btn-primary btn-sm o_form_button_create" accesskey="c">
+                <div class="fa fa-lg fa-plus o_button_icon"></div>
+                <span class="hidden-md hidden-sm hidden-xs">Create</span>
+            </button>
+        </t>
+        <t t-jquery="button.o_form_button_save" t-operation="replace">
+            <button type="button" class="btn btn-primary btn-sm o_form_button_save" accesskey="s">
+                <div class="fa fa-lg fa-save o_button_icon"></div>
+                <span class="hidden-md hidden-sm hidden-xs">Save</span>
+            </button>
+        </t>
+        <t t-jquery="button.o_form_button_cancel" t-operation="replace">
+            <button type="button" class="btn btn-primary btn-sm o_form_button_cancel" accesskey="j"
+            data-toggle="modal"
+                data-demo="{&quot;content&quot;:{&quot;effect&quot;:&quot;fadein&quot;},&quot;loader&quot;:{&quot;active&quot;:false}}">
+                <div class="fa fa-lg fa-times o_button_icon"></div>
+                <span class="hidden-md hidden-sm hidden-xs">Cancel</span>
+            </button>
+        </t>
+    </t>
+
+</templates>

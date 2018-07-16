@@ -1,0 +1,33 @@
+.ui-autocomplete {
+    background: @panel-background-color;
+    font-family: inherit;
+    .ui-state-focus {
+        a {
+            background-color: @primary-color !important;
+            color: @secondary-color !important;
+        }
+        // &.o_m2o_dropdown_option > a {
+        //     color: @secondary-color;
+        //     &:hover {
+        //         color: @topbar-color;
+        //     }
+        // }
+    }
+    .ui-menu-item {
+        > a {
+            color: @menu-a-color;
+        }
+        &:hover {
+            background: @primary-color;
+            > a {
+                color: @topbar-color !important;
+            }
+        }
+        &.o_m2o_dropdown_option > a {
+            color: @secondary-color;
+            // &:hover {
+            //     color: @active-a-color;
+            // }
+        }
+    }
+}

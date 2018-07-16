@@ -1,0 +1,300 @@
+.o_web_client {
+    nav {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .navbar-inverse {
+        background: @navbar-inverse-background;
+        border-color: transparent;
+        box-shadow: 0 2px 6px rgba(0,0,0,.12);
+        .navbar-nav {
+            > li {
+                > a {
+                    color: @active-a-color;
+                    background-color: transparent;
+                    &:hover {
+                        background-color: @primary-color;
+                        transition: @transition;
+                    }
+                }
+            }
+            > .open {
+                > a {
+                    background-color: @border-line-color;
+                    color: @primary-color;
+                    &:hover {
+                        color: @primary-color;
+                    }
+                }
+            }
+            > .active {
+                > a {
+                    background: @primary-color;
+                    color: @navbar-nav-active-color;
+                    &:hover {
+                        color: @active-a-color;
+                        // background: transparent;
+                        transition: none;
+                    }             
+                }
+            }
+        }
+    }
+    > .o_main {
+        background: @o_main_backround;
+        .o_view_manager_content {
+            background: @view_manager_content !important;
+            > div > header > div {
+                padding: 10px;
+                background: @body-background-color;
+            }
+            .table {
+                background-color: @panel-background-color;
+            }
+            .o_graph_svg_container {
+                // padding: 10px;
+                svg {
+                    background: @graph_svg_container;
+                    .nvd3 .nv-axis line {
+                        stroke: @border-line-color;
+                    }
+                }
+            }
+            .o_pivot {
+                // padding: 10px;
+                > table {
+                    background-color: @pivot-table-background-color-color;
+                    border: 1px solid @border-line-color;
+                    th {
+                        background-color: @pivot-table-th-background-color-color;
+                    }
+                    .o_pivot_header_cell_opened {
+                        background-color: @pivot-table-th-opened-background-color-color;
+                    }
+                    .o_pivot_header_cell_closed {
+                        background-color: @pivot-table-th-closed-background-color-color;
+                    }
+                    .o_pivot_measure_row {
+                        background-color: @pivot-table-th-measure-background-color-color;
+                        color: @primary-color;
+                    }
+                }
+            }
+            .o_calendar_container {
+                .o_calendar_view {
+                    .o_calendar_widget {
+                        background-color: @calendar-widget-background-color-color;
+                        .fc-week-number,
+                        .fc-widget-header {
+                            background-color: @panel-background-color;
+                            border: 1px solid @border-line-color;
+                            .fc-agenda-divider-inner {
+                                background: @body-background-color;
+                            }
+                        }
+                        .fc-widget-content {
+                            border: 1px dotted @border-line-color;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            .o_calendar_sidebar_container {
+                .ui-datepicker {
+                    border: 1px solid @border-line-color !important;
+                    table {
+                        td {
+                            padding: 0 2px 2px 0;
+                            background-color: @panel-background-color;
+                            border: 1px solid @border-line-color;
+                            a {
+                                background-color: @body-background-color;
+                                color: @body-color;
+                                &:active,
+                                &:hover {
+                                    background-color: @primary-color;
+                                    color: @calendar-active-a-color;
+                                    transition: @transition;
+                                }
+                            }
+                        }
+                        .ui-state-active {
+                            background-color: @primary-color !important;
+                            color: @calendar-active-a-color;
+                        }
+                    }
+                }
+                .o_calendar_filter {
+                    background: @calendar-filter-background-color !important;
+                    border-top: 1px solid @border-line-color;
+                    .o_calendar_contacts {
+                        font-size: 12px;
+                    }
+                }
+                .o_calendar_sidebar {
+                    .ui-widget-header {
+                        background-color: @calendar-sidebar-widget-header-background-color-color;
+                        border: 1px solid @border-line-color;
+                        color: inherit;
+                        .ui-datepicker-next,
+                        .ui-datepicker-prev {
+                            color: @body-color;
+                            &:hover {
+                                color: @primary-color;
+                            }
+                        }
+                    }
+                    .ui-widget-content {
+                        background: @calendar-sidebar-widget-content-background-color;
+                        color: @primary-color;
+                    }
+                }
+                .o_calendar_sidebar_toggler {
+                    &:hover {
+                        color: @primary-color;
+                    }
+                }
+            }
+        }
+        .o_sub_menu {
+            background-color: @o_sub_menu;
+            border-right: 1px solid @border-line-color;
+            box-shadow: 4px 0 6px -3px rgba(0,0,0,.12);
+            min-width: 280px;
+            .o_sub_menu_content {
+                .oe_secondary_menu_section.active {
+                    background: @secondary-menu-section-active-background-color;
+                    transition: all .3s;
+                    border-left: 4px solid @primary-color;
+                    .oe_menu_leaf {
+                        .oe_menu_text {
+                            color: @title-color;
+                        }
+                    }
+                }
+                .oe_secondary_menu_section {
+                    color: @menu-a-color;
+                    text-transform: uppercase;
+
+                    position: relative;
+                    display: block;
+                    padding: 10px 10px;
+                    margin-left: 0px;
+
+                    .oe_menu_leaf {
+                        .oe_menu_text {
+                            color: @menu-a-color;
+                            text-transform: uppercase;
+                        }    
+                    }
+                }
+                .oe_secondary_submenu {
+                    margin: 0px;
+                    > li:not(.active) {
+                        > a {
+                            color: #a5a9ad;
+                            &:hover {
+                                background-color: @secondary-submenu-active-hover-background-color-color;
+                                color: @primary-color;
+                                border-color: @secondary-submenu-not-active-hover-border-color;
+                                transition: all .3s;
+                                border-left: 4px solid @primary-color;
+                            }
+                        }
+                    }
+                    > li > a {
+                        position: relative;
+                        display: block;
+                        padding: 10px 15px;
+                        //font-size: 14px;
+                    }
+                    >.nav-stacked {
+                        > li + li {
+                            margin-top: 0px !important;
+                        }
+                    }
+                    .oe_menu_text {
+                        max-width: 100% !important;
+                    }
+                }
+                ul li.active {
+                    border-left: 4px solid @primary-color;
+                }
+            }
+        }
+        .o_content {
+            .o_web_settings_dashboard {
+                background: transparent;
+                .o_web_settings_dashboard_col {
+                    > div {
+                        background: @panel-background-color;
+                        > hr {
+                            border-color: @border-line-color;
+                        }
+                        .o_web_settings_dashboard_invitation_form {
+                            textarea {
+                                background: transparent;
+                                border-color: @border-line-color;
+                                color: @field-color;
+                                &:focus {
+                                    border-color: @primary-color;
+                                    color: @title-color;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        // color: @secondary-color;
+                        &:hover {
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+            .table {
+                tr {
+                    td {
+                        border-color: @border-line-color;
+                        color: @table-td-color !important;
+                    }
+                }
+                tbody {
+                    tr {
+                        &:hover {
+                            //background: @primary-color;
+                            td {
+                                color: @primary-color !important;
+                                border-top: 1px dotted @primary-color !important;
+                                border-bottom: 1px dotted @primary-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul li a i {
+            font-size: 21px;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+        ul li:nth-child(0) a i {
+            color: #558B2F;
+        }
+    }
+    .oe_import {
+        background-color: transparent;
+        .oe_import_box {
+            background: @panel-background-color;
+            border: 1px solid @border-line-color;
+            p {
+                color: @primary-color;
+            }
+            .oe_import_file_show {
+                background: transparent;
+            }
+            input {
+                border: 1px solid @border-line-color;
+            }
+        }
+    }
+}

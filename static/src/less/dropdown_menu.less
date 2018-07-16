@@ -1,0 +1,32 @@
+ul.dropdown-menu {
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    .active > a {
+        background-color: @primary-color;
+        color: @border-line-color;
+        &:hover {
+            color: @border-line-color;
+        }
+    }
+    background-color: @border-line-color;
+    color: @title-color !important;
+    > li.dropdown-header {
+        color: @odoo-view-background-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: @panel-background-color;
+        font-weight: bold;
+    }
+    > li > a {
+        color: @title-color;
+        &:hover {
+            color: @border-line-color !important;
+            border-top: 0px solid transparent;
+            border-bottom: 0px solid transparent !important;
+            background-color: @primary-color;
+        }
+    }
+    .divider {
+        background-color: @panel-background-color;
+    }
+}

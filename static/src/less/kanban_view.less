@@ -1,0 +1,18 @@
+.o_kanban_view {
+    .o_kanban_record {
+        border-color: @border-line-color;
+        box-shadow: none !important;
+        background-color: @panel-background-color !important;
+        &:hover {
+            border-color: lighten(@primary-color, 5%);
+        }
+    }
+    .o_kanban_quick_create {
+        padding: 8px 8px;
+        border: 1px solid @border-line-color;
+        background-color: @panel-background-color !important;
+        .oe_kanban_details {
+            color: @modal-body-color;
+        }
+    }
+}

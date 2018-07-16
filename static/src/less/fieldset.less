@@ -1,0 +1,19 @@
+fieldset {
+    &:disabled {
+        .btn-primary {
+            color: @disabled-color;
+            background-color: @primary-color-dark-20;
+            border-color: @primary-color-dark-20;
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+                background-color: @primary-color-dark-20;
+                border-color: @primary-color-dark-20;
+                color: @disabled-color;
+            }
+        }
+
+    }
+}

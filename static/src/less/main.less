@@ -1,0 +1,254 @@
+/* Copyright 2016 LasLabs Inc.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+ @import url("https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700");
+
+ body {
+    font-family: 'Libre Franklin', sans-serif;
+    color: @body-color !important;
+    // font-family: 'Source Sans Pro',sans-serif;
+    font-size: calc(13px + 1*((100vw - 320px)/1280));
+    line-height: 1.74em;
+    overflow: hidden;
+    background: @body-background-color !important;
+
+    width: 100%;
+    height: 100%;
+
+    // Do not fix the search part, it's too big for small screens
+    @media (max-width: @screen-sm-max) {
+        overflow: inherit;
+        .odoo {
+            .oe-view-manager {
+                overflow: inherit;
+            }
+        }
+    }
+}
+
+/***
+Rounded corners reset
+***/
+/* Reset rounded corners for all elements */
+div, 
+svg,          
+input,      
+select,                    
+textarea,             
+span,                          
+img,               
+table,                       
+label,  
+td,                  
+th,    
+p,          
+a, 
+button, 
+ul,    
+code,
+pre,    
+li {
+    -webkit-border-radius: 0 !important;                   
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+}
+
+hr {
+    border-top: 1px solid @border-line-color;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    z-index: 10;
+}
+
+.img-circle {
+    border-radius: 50% !important;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: @primary-color;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid @primary-color;
+    margin: 1px 2px 1px 0;
+}
+
+.o_cp_switch_buttons {
+    .active {
+        z-index: 10;
+    }
+}
+
+.o_sub_menu {
+    .o_sub_menu_logo {
+        display: none;
+    }
+    .o_sub_menu_footer {
+        display: none;
+    }
+}
+
+.o_tooltip.active {
+    z-index: 1051;
+}
+
+.o_web_client {
+    &.o_fullscreen {
+        #oe_main_menu_navbar {
+            display: none;
+        }
+        .o_main .o_sub_menu {
+            display: none;
+         }
+        .navbar {
+            display: none;
+        }
+        .navbar-default main-nav{
+            display: none
+        }
+        .main-nav{
+            display: none
+        }
+
+     }
+
+    >.o_main {
+        overflow: auto;
+        > .o_main_content {
+            overflow: initial;
+            > .o_content {
+                @media (max-width: @screen-xs-max) {
+                    overflow: initial;
+                }
+
+                @media (min-width: @screen-sm-min) {
+                    // .o_content is the one to display horizontal scrolling in
+                    // case of wide tables
+                    .table-responsive {
+                        overflow-x: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .o_control_panel {
+        // Remove z-index from CP buttons so it doesn't overlap the menu
+        .btn-group > .btn.active {
+            z-index: initial;
+        }
+
+        // Better horizontal space usage for buttons
+        justify-content: space-between;
+        .o_cp_left, .o_cp_right {
+            width: inherit;
+        }
+
+        .o_search_options > .o_dropdown {
+            &.hidden-xs {
+                // No other way to display "Group By" button :(
+                display: inline-block !important;
+            }
+
+            // Hack to hide text and display larger icons
+            > .btn {
+                font-size: 0;
+                > .fa {
+                    font-size: @odoo-font-size-base * 1.4;
+                }
+            }
+        }
+    }
+}
+
+.o_chat_window {
+    z-index: 1000;
+    background-color: @body-background-color;
+    border: 1px solid @border-line-color;
+    .o_chat_header {
+        background-color: @panel-background-color;
+    }
+}
+
+.open {
+    > .dropdown-toggle {
+        &.btn-primary {
+            background-color: @primary-color-dark-10;;
+            border-color: @primary-color;
+            &:focus,
+            &:hover {
+                background-color: @border-line-color;
+                color: @primary-color;
+                border-color: @primary-color;
+            }
+        }
+        &.o_dropdown_toggler_btn {
+            color: @primary-color;
+            background: transparent;
+            &:focus,
+            &:hover {
+                color: @primary-color;
+                background: transparent;
+                border-color: @primary-color;
+            }
+        }
+        &.btn-icon {
+            background: @primary-color;
+            color: @title-color;
+            border-color: @primary-color;
+            box-shadow: none;
+        
+            &:hover {
+                border-color: lighten(@primary-color,10%);
+                background: transparent;
+                color: @primary-color;
+            }
+        }
+    }
+}
+
+a {
+    &:hover {
+        color: @primary-color-dark-20;
+    }
+}
+
+div.o_checkbox > input + span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid @border-line-color;
+    background-color: @primary-color;
+}
+div.o_checkbox > input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    cursor: pointer;
+}
+
+div.o_checkbox > input:focus + span {
+    outline: 1px solid lighten(@primary-color, 10%);
+}
