@@ -3,7 +3,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
-    "name": "Web Responsive",
+    "name": "Web Responsive ASF",
     "summary": "It provides a mobile compliant interface for Odoo Community "
                "web",
     "version": "10.0.1.2.3",

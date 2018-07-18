@@ -1,5 +1,8 @@
 
 .datepicker {
+    table {
+        background-color: @border-line-color;
+    }
     .table-condensed {
         > thead {
             background-color: @primary-color;
@@ -17,11 +20,17 @@
                 td.active {
                     background-color: @primary-color;
                 }
+                td.active.today {
+                    border-bottom-color: @panel-background-color;
+                }
                 td.today:before {
                     background-color: transparent;
-                    border-bottom-color: @title-color;
+                    border-bottom-color: @orange;
                 }
             }
         }
     }
+}
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    background-color: @panel-background-color;
 }

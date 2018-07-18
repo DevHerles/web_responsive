@@ -15,6 +15,7 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/bootstrap_datetimepicker_widget.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/button.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/chatter.less"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/less/components.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/control_panel.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/dashboard.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/datepicker.less"/>
@@ -24,12 +25,14 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/form_controls.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/form_view.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/html.less"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/less/icons.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/import.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/kanban_view.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/list_view.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/mail_navbar.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/mail_view.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/main.less"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/less/menu_systray.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/modal.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/navbar.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/pivot.less"/>

@@ -28,6 +28,7 @@ odoo.define('web_responsive', function(require) {
             if (allowOpen) return;
             var $clicked_menu = this.$secondary_menus.find('a[data-menu=' + id + ']');
             $clicked_menu.parents('.oe_secondary_submenu').css('display', '');
+            $clicked_menu.parents('.oe_secondary_submenu').parent().toggleClass('active')
         },
 
     });
