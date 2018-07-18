@@ -123,21 +123,22 @@ header {
                 border-bottom: 0px solid transparent !important;
             }
             .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu {
-                ul::before {
-                    left: 20px;
-                    top: -10px;
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    background-color: transparent;
-                    border-left: 12px solid transparent;
-                    border-right: 12px solid transparent;
-                    border-bottom: 12px solid @primary-color;
-                    z-index: 9999;
-                }
+                // ul::before {
+                //     left: 20px;
+                //     top: -10px;
+                //     content: "";
+                //     display: block;
+                //     position: absolute;
+                //     background-color: transparent;
+                //     border-left: 12px solid transparent;
+                //     border-right: 12px solid transparent;
+                //     border-bottom: 12px solid @primary-color;
+                //     z-index: 9999;
+                // }
                 ul.dropdown-menu {
                     -webkit-transition: all .2s ease;
                     transition: all .2s ease;
+                    padding: 0px;
                     .active > a {
                         background-color: @primary-color;
                         color: @border-line-color;
@@ -160,7 +161,11 @@ header {
                             color: @border-line-color !important;
                             border-top: 0px solid transparent;
                             border-bottom: 0px solid transparent !important;
+                            border-left: 3px solid @orange !important;
+                            border-right: 0px solid transparent !important;
                             background-color: @primary-color;
+                            -webkit-transition: all .2s ease;
+                            transition: all .2s ease;
                         }
                     }
                 }
@@ -223,6 +228,9 @@ header {
         ul.nav > li > a {
             padding: @app-drawer-navbar-padding-vertical @app-drawer-padding-horizontal;
             background-color: @body-background-color;
+            .open {
+                background-color: @border-line-color;
+            }
         }
 
         .o_planner_systray > .progress {
@@ -249,20 +257,29 @@ a.navbar-collapse.collapse {
     .navbar-nav {
         > .open > a,
         > .active > a {
-            background-color: @primary-color;
-            color: @primary-color;
+            background-color: @primary-color !important;
+            color: @border-line-color;
         }
         > .open > a:hover,
         > .open > a:focus,
         > .active > a:hover,
         > .active > a:focus {
-            background-color: @primary-color;
-            color: yellow;
+            background-color: @border-line-color !important;
+            color: lightgreen;
+            border-top: 0px solid transparent !important;
+            border-left: 0px solid transparent !important;
+            border-right: 0px solid transparent !important;
+            border-bottom: 0px solid transparent !important;
         }
-        > li > a:hover,
-        > li > a:focus {
-            color: @body-background-color;
-            background-color: @primary-color;
+        > li > a {
+            &:focus {
+                color: @primary-color;
+                background-color: @body-background-color;
+            }
+            &:hover {
+                color: orange !important;
+                background-color: @primary-color;
+            }
         }
         > li > a {
             color: rgba(255,255,255,.7);
@@ -272,6 +289,10 @@ a.navbar-collapse.collapse {
 
 .navbar-nav .open .dropdown-menu > li > a {
     padding: 5px 25px;
+}
+
+.navbar-nav .open .dropdown-menu {
+    border: 1px solid @border-line-color;
 }
 
 header > .main-nav > .container-fluid > .navbar-header > .drawer-toggle > i.fa, header > .main-nav > .container-fluid > .navbar-header .navbar-toggle > i.fa, header > .main-nav > .container-fluid > .navbar-header > .drawer-toggle div.fa, header > .main-nav > .container-fluid > .navbar-header .navbar-toggle div.fa {

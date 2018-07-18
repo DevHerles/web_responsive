@@ -1,4 +1,8 @@
 .o_kanban_view {
+    .oe_kanban_color_0 {
+        background-color: @panel-background-color;
+        color: @orange !important;
+    }
     .o_kanban_record {
         border-color: @border-line-color;
         box-shadow: none !important;
@@ -13,6 +17,27 @@
         background-color: @panel-background-color !important;
         .oe_kanban_details {
             color: @modal-body-color;
+        }
+    }
+    &.o_kanban_dashboard.o_kanban_ungrouped {
+        a:hover {
+            color: @primary-color !important;
+        }
+        .o_kanban_card_header {
+            background-color: @border-line-color;
+            .o_kanban_card_header_title {
+                .o_primary {
+                    color: @title-color;
+                }
+            }
+        }
+        .o_kanban_card_content {
+            .o_kanban_primary_bottom {
+                background-color: @border-line-color;
+            }
+        }
+        .o_kanban_card_manage_title {
+            border-color: inherit;
         }
     }
 }

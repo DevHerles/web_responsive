@@ -29,6 +29,7 @@
 .o_form_view .o_group.o_inner_group > tbody > tr > td .o_form_uri.o_form_field {
     width: auto;
     border: 0px solid red !important;
+    color: orange !important;
 }
 .o_form_view .o_group.o_inner_group.oe_subtotal_footer .oe_subtotal_footer_separator {
     border-top: 1px solid @border-line-color;
@@ -82,10 +83,8 @@
                     border: 1.5px solid @primary-color;
                 }
                 > .label {
-                    /* border-left: 0.5px solid @primary-color !important;
-                    border-top: 0.5px solid @primary-color !important;
-                    border-bottom: 0.5px solid @primary-color !important; */
                     border: 1px solid @primary-color !important;
+                    color: @secondary-color !important;
                 }
             }
             li > .arrow span {
@@ -105,14 +104,15 @@
                 background: transparent;
                 border-radius: 0px;
                 color: @field-color;
-                padding: .375rem .75rem;
+                //padding: 2px !important;
+                //padding: 0px !important;
             }
         }
     }
     .oe_title {
         padding-left: 0 !important;
         margin-left: 0 !important;
-        margin-top: 40px;
+        margin-top: 4px;
     }
     .oe_avatar {
         float: right;
@@ -162,7 +162,7 @@
     // No overflowing buttons or titles
     .oe_button_box, .oe_title {
         max-width: 100%;
-        box-shadow: inset 0 -1px 0 @border-line-color;
+        // box-shadow: inset 0 -1px 0 @border-line-color;
     }
     .oe_button_box {
         width: initial;
@@ -181,6 +181,7 @@
             border: 1px solid @border-line-color;
             &:hover {
                 background: @oe_stat-button-hover-background-color;
+                color: @orange;
                 .oe_stat_text {
                     color: @title-color;
                 }
@@ -235,7 +236,7 @@
         .o_form_input {
             background: transparent;
             border: 0px solid @border-line-color !important;
-            color: yellow;
+            color: @primary-color;
             &:focus {
                 border-color: @primary-color;
                 transition: all .3s ease-in-out;
@@ -334,6 +335,7 @@
         ul.oe_form_status li.oe_active {
             background-color: transparent;
             border: 1px solid @border-line-color;
+            
         }
         // reduce form maximum columns for smaller screens
         @media (max-width: @screen-xs-max) {
@@ -416,4 +418,8 @@
     .oe_chatter {
         min-width: inherit;
     }
+}
+.label-default {
+    background-color: @border-line-color;
+    color: @primary-color;
 }
