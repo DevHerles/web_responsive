@@ -15,7 +15,7 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/bootstrap_datetimepicker_widget.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/button.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/chatter.less"/>
-            <link rel="stylesheet" href="/web_responsive/static/src/less/components.less"/>
+            <!-- <link rel="stylesheet" href="/web_responsive/static/src/less/components.less"/> -->
             <link rel="stylesheet" href="/web_responsive/static/src/less/control_panel.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/dashboard.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/datepicker.less"/>

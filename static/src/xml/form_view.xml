@@ -46,16 +46,6 @@
                 <span class="hidden-md hidden-sm hidden-xs">Cancel</span>
             </button>
         </t>
-        <t t-jquery="input[type=checkbox]" t-operation="replace">
-            <div class="o_checkbox o_form_field_boolean checkbox mb-2 checkbox-primary">
-                <input type="checkbox"
-                    t-att-id="widget.id_for_label"
-                    t-att-name="widget.name"
-                    t-att-tabindex="widget.node.attrs.tabindex"
-                    t-att-autofocus="widget.node.attrs.autofocus"/>
-                <span/>
-            </div>
-        </t>
     </t>
 
 </templates>
