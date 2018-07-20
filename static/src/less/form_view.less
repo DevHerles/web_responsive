@@ -31,6 +31,12 @@
     border: 0px solid red !important;
     color: orange !important;
 }
+.o_form_view.o_form_readonly .o_form_uri:first-line {
+    color: @primary-color;
+    &:hover {
+        color: orange !important;
+    } 
+}
 .o_form_view .o_group.o_inner_group.oe_subtotal_footer .oe_subtotal_footer_separator {
     border-top: 1px solid @border-line-color;
 }
@@ -83,10 +89,8 @@
                     border: 1.5px solid @primary-color;
                 }
                 > .label {
-                    /* border-left: 0.5px solid @primary-color !important;
-                    border-top: 0.5px solid @primary-color !important;
-                    border-bottom: 0.5px solid @primary-color !important; */
                     border: 1px solid @primary-color !important;
+                    color: @secondary-color !important;
                 }
             }
             li > .arrow span {
@@ -106,8 +110,8 @@
                 background: transparent;
                 border-radius: 0px;
                 color: @field-color;
-                // padding: .75rem .75rem !important;
-                padding: 0px !important;
+                //padding: 2px !important;
+                //padding: 0px !important;
             }
         }
     }
@@ -337,6 +341,7 @@
         ul.oe_form_status li.oe_active {
             background-color: transparent;
             border: 1px solid @border-line-color;
+            
         }
         // reduce form maximum columns for smaller screens
         @media (max-width: @screen-xs-max) {
