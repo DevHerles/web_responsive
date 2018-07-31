@@ -38,6 +38,7 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/modal.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/navbar.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/pivot.less"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/less/right.less"/>
             <!-- <link rel="stylesheet" href="/web_responsive/static/src/less/scrollbar.less"/> -->
             <link rel="stylesheet" href="/web_responsive/static/src/less/searchview.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/svg.less"/>
@@ -47,6 +48,8 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/variables.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/web_client.less"/>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="/web_responsive/static/lib/css/jquery.scrollbar.css"/>
+            <script type="application/javascript" src="/web_responsive/static/lib/js/jquery.scrollbar.min.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/bililiteRange.2.6.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/jquery.sendkeys.4.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/iscroll-probe.5.2.0.js"/>

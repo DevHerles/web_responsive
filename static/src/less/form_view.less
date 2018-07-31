@@ -22,6 +22,7 @@
  .o_form_view .o_form_field_date,
  .o_form_view .o_form_field_binary_file {
      padding: 0px !important;
+     color: @secondary-color;
  }
 .o_form_view .o_group.o_inner_group > tbody > tr > td span.o_form_field,
 .o_form_view .o_group.o_inner_group > tbody > tr > td .o_form_field_boolean.o_form_field,
@@ -223,7 +224,7 @@
                     }
                 }
                 > .arrow span, {
-                    background-color: @title-color;
+                    background-color: @panel-background-color !important;
                     background: @title-color;
                 }
             }
@@ -264,6 +265,7 @@
             background: @primary-color;
         }
         margin-bottom: 0px;
+        color: @secondary-color;
     }
     .o_form_textarea {
         background: transparent;
@@ -391,11 +393,11 @@
         > li.active > a:active, 
         > li.active > a:focus {
             border-top: 1px solid;
-            background-color: transparent;
-            color: @primary-color !important;
+            // background-color: @panel-background-color;
+            color: @secondary-color !important;
             border-left: 1px solid @border-line-color;
             border-right: 1px solid @border-line-color;
-            border-bottom: 1px solid @panel-background-color;
+            // border-bottom: 1px solid @panel-background-color;
         }
     }
     .table {

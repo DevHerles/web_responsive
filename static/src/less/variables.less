@@ -18,7 +18,7 @@
 @drawer-toggle-width: @navbar-height;
 
 // ASF Theme
-@blue:                          #188ae2; //#03a9f4; //#37cfdc;
+@blue:                          #03a9f4; //#37cfdc;
 @sea:                           #379392;
 @violet:                        #a3498b; //#9055a2;
 @green:                         #429244;
@@ -29,7 +29,7 @@
 
 @primary-color:                 @blue;
 @secondary-color:               orange !important;
-@topbar-color:                  #1b1f32; //#2d3035;
+@topbar-color:                  #2d3035; //#272c30;
 @body-color:                    lighten(@panel-background-color,65%);
 @body-secondary-color:          lighten(@panel-background-color,4%);
 @link-active-color:             @primary-color;
@@ -37,7 +37,8 @@
 @body-background-color:         darken(@panel-background-color,5%);
 
 @title-color:                   lighten(@panel-background-color,60%);
-@panel-background-color:        @topbar-color!important;
+@panel-background-color:        lighten(@topbar-color, 3%) !important;
+@tab-background-color:          @panel-background-color;
 @form-input-hover-color:        @body-secondary-color;
 
 @border-line-color:             lighten(@panel-background-color,5%);
