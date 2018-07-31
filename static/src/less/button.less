@@ -73,16 +73,16 @@
         box-shadow: none;
         border-color: @primary-color;
         background: @btn-active-background-color;
-        color: @primary-color;
+        color: @btn-active-color !important;
     }
 
     &:hover {
-        border-color: lighten(@primary-color,0.1);
+        border-color: @btn-active-hover-color;
     }
 }
 
 .btn-icon {
-    color: @primary-color;
+    color: @primary-color !important;
     background-color: transparent;
     border-color: transparent;
     &:disabled {

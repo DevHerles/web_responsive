@@ -10,11 +10,15 @@
     }
     .ui-menu-item {
         > a {
-            color: @primary-color;
+            color: @autocomplete-menu-item-color;
+            &:hover {
+                color: @autocomplete-menu-item-hover-color !important;
+            }
         }
         &:hover {
-            background: @primary-color;
-            color: @border-line-color !important;
+            // background: @autocomplete-menu-item-hover-background-color;
+            // color: @autocomplete-menu-item-hover-color !important;
+            background-color: @dropdown-menu-item-background-hover-color !important;
         }
         &.o_m2o_dropdown_option {
             padding-left: 0px;

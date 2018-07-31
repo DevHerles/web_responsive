@@ -134,8 +134,8 @@ odoo.define('web_responsive', function(require) {
                 $.proxy(this.closeSearchMenus, this)
             );
             this.$el.find('.drawer-fullscreen-open').click(
-                // $.proxy(this.requestFullscreen(document.documentElement), this)
-                this.requestFullscreen(document.documentElement)
+                $.proxy(this.requestFullscreen(document.documentElement), this)
+                //this.requestFullscreen(document.documentElement)
             );
             this.$el.find('.menu-search-trigger').click(
                 $.proxy(this.openSearch, this)

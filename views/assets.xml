@@ -46,14 +46,20 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/tabs.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/tooltip.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/variables.less"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/less/views_extra.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/web_client.less"/>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="/web_responsive/static/lib/css/jquery.scrollbar.css"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/css/demo.css"/>
+            <script type="application/javascript" src="/web_responsive/static/lib/js/jquery.scrollbar.min.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/bililiteRange.2.6.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/jquery.sendkeys.4.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/iscroll-probe.5.2.0.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/drawer.3.2.2.js"/>
             <script type="application/javascript" src="/web_responsive/static/lib/js/custombox.min.js"/>
             <script type="application/javascript" src="/web_responsive/static/src/js/web_responsive.js"/>
+            <script type="application/javascript" src="/web_responsive/static/src/js/app.js"/>
+            <script type="application/javascript" src="/web_responsive/static/src/js/demo.js"/>
         </xpath>
     </template>
     <template id="qunit_suite" inherit_id="web.qunit_suite">

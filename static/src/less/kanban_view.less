@@ -1,20 +1,26 @@
 .o_kanban_view {
     .oe_kanban_color_0 {
-        background-color: @panel-background-color;
+        background-color: @kanban-color-0-background-color;
         color: @orange !important;
     }
     .o_kanban_record {
-        border-color: @border-line-color;
+        border-color: @border-line-color !important;
         box-shadow: none !important;
-        background-color: @panel-background-color !important;
+        background-color: @kanban-record-background-color !important;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        border-right: 1px solid;
         &:hover {
-            border-color: lighten(@primary-color, 5%);
+            border-color: @kanban-record-hover-border-color;
+            background-color: @kanban-record-hover-background-color !important;
+            color: @kanban-record-hover-color !important;
         }
     }
     .o_kanban_quick_create {
         padding: 8px 8px;
         border: 1px solid @border-line-color;
-        background-color: @panel-background-color !important;
+        background-color: @kanban-quick-create-background-color !important;
         .oe_kanban_details {
             color: @modal-body-color;
         }

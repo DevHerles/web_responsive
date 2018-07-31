@@ -3,7 +3,7 @@
     a:focus {
         background-color: transparent;
         color: @secondary-color;
-        border-top: 1px solid @primary-color;
+        border-top: 1px solid @primary-color !important;
         border-bottom: 1px solid @panel-background-color;
         border-left: 1px solid @border-line-color;
         border-right: 1px solid @border-line-color;
@@ -13,9 +13,16 @@
     }
 }
 .tab-content {
+    padding: 15px 15px 5px;
+    // background-color: @panel-background-color;
+    border-right: 1px solid @border-line-color;
+    border-left: 1px solid @border-line-color;
     > .active {
         padding: 0 10px;
     }
+    // .nav-tabs {
+    //     border-bottom: 1px solid @border-line-color !important;
+    // }
     .nav {
         li {
             > a {
@@ -28,7 +35,7 @@
         .nav-tabs {
             border-left: 1px solid @border-line-color;
             border-right: 1px solid @border-line-color;
-            border-bottom: 1px solid @border-line-color;
+            border-bottom: 1px solid @border-line-color !important;
             > li {
                 > a {
                     color: @primary-color;
@@ -36,9 +43,20 @@
                     &:focus {
                         color: @secondary-color;
                         border-color: transparent;
+                        border-bottom: 1px solid @tab-content-background-color !important;
                     }
                 }
             }
+        }
+    }
+}
+.nav-tabs {
+    border-bottom: 1px solid @border-line-color;
+    position: relative;
+    > li {
+        a:hover,
+        a:active {
+            border-bottom: 1px solid @tab-content-background-color !important;
         }
     }
 }

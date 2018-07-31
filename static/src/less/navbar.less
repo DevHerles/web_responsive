@@ -115,8 +115,8 @@ header {
             }
 
             .nav > li > a:hover, a:focus {
-                background-color: transparent;
-                color: @primary-color !important;
+                background-color: darken(@topbar-color, 3%) !important;
+                color: @secondary-color !important;
                 border-top: 0px solid transparent !important;
                 border-left: 0px solid transparent !important;
                 border-right: 0px solid transparent !important;
@@ -139,31 +139,33 @@ header {
                     -webkit-transition: all .2s ease;
                     transition: all .2s ease;
                     padding: 0px;
-                    .active > a {
-                        background-color: @primary-color;
-                        color: @border-line-color;
-                        &:hover {
-                            color: @border-line-color;
-                        }
-                    }
                     background-color: @border-line-color;
                     color: @title-color !important;
+                    .active > a {
+                        background-color: @dropdown-menu-item-active-background-color-color;
+                        color: @dropdown-menu-item-active-color;
+                        border-left: 3px solid @menu-item-left-border-color !important;
+                        &:focus,
+                        &:hover {
+                            color: @dropdown-menu-item-active-hover-color;
+                        }
+                    }
                     > li.dropdown-header {
-                        color: @odoo-view-background-color;
+                        color: @dropdown-menu-header-item-color;
                         text-transform: uppercase;
                         text-decoration: none;
-                        background-color: @panel-background-color;
+                        background-color: @dropdown-menu-header-item-background-color;
                         font-weight: bold;
                     }
                     > li > a {
-                        color: @title-color;
+                        // color: @dropdown-menu-item-color;
                         &:hover {
-                            color: @border-line-color !important;
+                            color: @dropdown-menu-item-hover-color !important;
                             border-top: 0px solid transparent;
                             border-bottom: 0px solid transparent !important;
-                            border-left: 3px solid @orange !important;
+                            border-left: 3px solid @menu-item-left-border-color !important;
                             border-right: 0px solid transparent !important;
-                            background-color: @primary-color;
+                            background-color: @dropdown-menu-item-background-hover-color;
                             -webkit-transition: all .2s ease;
                             transition: all .2s ease;
                         }

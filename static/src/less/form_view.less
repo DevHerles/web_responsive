@@ -30,12 +30,12 @@
 .o_form_view .o_group.o_inner_group > tbody > tr > td .o_form_uri.o_form_field {
     width: auto;
     border: 0px solid red !important;
-    color: orange !important;
+    color: @tertiary-color !important;
 }
 .o_form_view.o_form_readonly .o_form_uri:first-line {
     color: @primary-color;
     &:hover {
-        color: orange !important;
+        color: @tertiary-color !important;
     } 
 }
 .o_form_view .o_group.o_inner_group.oe_subtotal_footer .oe_subtotal_footer_separator {
@@ -46,7 +46,7 @@
     > header {
         border-bottom: 1px solid @border-line-color !important;
         background-image: none;
-        background: @panel-background-color;
+        background: @breadcrumbs-background-color;
         > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
             color: @primary-color;
             border-color: transparent;
@@ -65,12 +65,13 @@
                 > .label {
                     text-shadow: unset;
                     color: @form-input-color;
+                    background-color: @breadcrumbs-background-color !important;
+                    height: 100px;
                 }
                 > .arrow { 
                     background: @panel-background-color;
                     span {
-                        background: @panel-background-color;
-                        border: 1px solid @primary-color;
+                        background-color: @breadcrumbs-background-color !important;
                     }
                 }
                 &:first-child {
@@ -84,14 +85,16 @@
             }
             li.oe_active {
                 border: unset;
-                background: @border-line-color;
+                background: @panel-background-color;
                 > .arrow span {
-                    background: @border-line-color !important;
-                    border: 1.5px solid @primary-color;
+                    background: @breadcrumbs-active-background-color !important;
+                    // border: 1.5px solid @primary-color;
                 }
                 > .label {
-                    border: 1px solid @primary-color !important;
+                    // border: 1px solid @primary-color !important;
                     color: @secondary-color !important;
+                    background-color: @breadcrumbs-active-background-color !important;
+                    height: 100%;
                 }
             }
             li > .arrow span {
@@ -150,10 +153,12 @@
             .o_list_view {
                 tbody tr:hover { 
                     td { 
-                        color: @primary-color;
-                        border-top: 1px dotted @primary-color;
-                        border-bottom: 1px dotted @primary-color;
+                        color: @secondary-color;
+                        background-color: @table-tr-hover-background-color;
                     }
+                }
+                tbody {
+                    color: @field-color !important;
                 }
             }
         }
@@ -199,6 +204,7 @@
             }
         }
     }
+    h3,
     .o_horizontal_separator {
         color: #a5a7ab;
         text-transform: uppercase;
@@ -220,11 +226,11 @@
                     background-color: transparent;
                     > .label {
                         color: @primary-color;
-                        text-shadow: none;    
+                        text-shadow: none;
                     }
                 }
                 > .arrow span, {
-                    background-color: @title-color;
+                    background-color: @breadcrumbs-background-color !important;
                     background: @title-color;
                 }
             }
@@ -319,7 +325,7 @@
             .o_form_label {
                 font-weight: normal;
                 margin-right: 0px;
-                color: @body-color !important;
+                // color: @body-color !important;
                 font-size: inherit;
             }
         }
@@ -393,11 +399,11 @@
         > li.active > a:active, 
         > li.active > a:focus {
             border-top: 1px solid;
-            background-color: transparent;
+            // background-color: @panel-background-color;
             color: @secondary-color !important;
             border-left: 1px solid @border-line-color;
             border-right: 1px solid @border-line-color;
-            border-bottom: 1px solid @panel-background-color;
+            // border-bottom: 1px solid @panel-background-color;
         }
     }
     .table {
