@@ -38,6 +38,7 @@
             <link rel="stylesheet" href="/web_responsive/static/src/less/modal.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/navbar.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/pivot.less"/>
+            <link rel="stylesheet" href="/web_responsive/static/src/less/right.less"/>
             <!-- <link rel="stylesheet" href="/web_responsive/static/src/less/scrollbar.less"/> -->
             <link rel="stylesheet" href="/web_responsive/static/src/less/searchview.less"/>
             <link rel="stylesheet" href="/web_responsive/static/src/less/svg.less"/>

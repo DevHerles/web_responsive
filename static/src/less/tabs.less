@@ -2,11 +2,14 @@
     a:hover,
     a:focus {
         background-color: transparent;
-        color: @primary-color;
+        color: @secondary-color;
         border-top: 1px solid @primary-color;
         border-bottom: 1px solid @panel-background-color;
         border-left: 1px solid @border-line-color;
         border-right: 1px solid @border-line-color;
+    }
+    a {
+        color: @primary-color !important;
     }
 }
 .tab-content {
@@ -25,12 +28,13 @@
         .nav-tabs {
             border-left: 1px solid @border-line-color;
             border-right: 1px solid @border-line-color;
+            border-bottom: 1px solid @border-line-color;
             > li {
                 > a {
-                    color: @body-color;
+                    color: @primary-color;
                     &:hover,
                     &:focus {
-                        color: @primary-color;
+                        color: @secondary-color;
                         border-color: transparent;
                     }
                 }
