@@ -6,54 +6,6 @@
 -->
 
 <odoo>
-
-    <template id="web.webclient_bootstrap">
-        <t t-call="web.layout">
-            <t t-set="head_web">
-                <script type="text/javascript">
-                    odoo.session_info = <t t-raw="session_info"/>;
-                </script>
-
-                <t t-call-assets="web.assets_common" t-js="false"/>
-                <t t-call-assets="web.assets_backend" t-js="false"/>
-                <t t-call-assets="web.assets_common" t-css="false"/>
-                <t t-call-assets="web.assets_backend" t-css="false"/>
-
-                <![CDATA[
-                    <!--[if lt IE 10]>
-                        <body class="ie9">
-                    <![endif]-->
-                ]]>
-
-                <t t-call="web.webclient_script"/>
-            </t>
-            <t t-set="head" t-value="head_web + (head or '')"/>
-            <t t-set="body_classname" t-value="'o_web_client'"/>
-            <div class="wrapper">
-                <nav id="oe_main_menu_navbar" class="navbar navbar-inverse" groups="base.group_user,base.group_portal">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <t t-call="web.menu"/>
-                    </div>
-                </nav>
-                <div class="o_main">
-                    <div class="o_sub_menu" groups="base.group_user,base.group_portal">
-                        <t t-call="web.menu_secondary"/>
-                    </div>
-                    <div class="main__scroll">
-                        <div class="o_main_content"/>
-                    </div>
-                </div>
-            </div>
-        </t>
-    </template>
-
     <template id="webclient_bootstrap"
               inherit_id="web.webclient_bootstrap"
               name="App Drawer - Web Client"
@@ -72,7 +24,7 @@
 
         <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
 
-            <t t-set="body_classname" t-value="'drawer drawer--left o_web_client framed main-scrollable'" />
+            <t t-set="body_classname" t-value="'drawer drawer--left o_web_client'" />
 
             <header role="banner">
                 <nav id="odooAppDrawer" class="app-drawer-nav drawer-nav" role="navigation">
@@ -183,7 +135,7 @@
             inherit_id="web.webclient_bootstrap"
             name="Theme selector"
             >
-        <xpath expr="//div[@class='wrapper']" position="after">
+        <xpath expr="//div[@class='o_main']" position="after">
             <div class="demo">
                 <div class="demo__ico"></div>
                     <div class="demo__cont">
@@ -199,6 +151,15 @@
                     </div>
                 </div>
             </div>
+        </xpath>
+    </template>
+
+    <template id="to_top"
+            inherit_id="web.webclient_bootstrap"
+            name="To top"
+            >
+        <xpath expr="//div[@class='o_main']" position="after">
+            <div id="toTop" class="btn back-top" style="display: block;"/>
         </xpath>
     </template>
 
