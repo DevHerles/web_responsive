@@ -1,0 +1,29 @@
+// @media (min-width: 768px)
+// #toTop {
+//     right: 30px;
+// }
+// }
+#toTop {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+}
+.back-top {
+    border: 1px solid #2c3136;
+}
+.back-top, .sidebar {
+    background-color: #2c3136;
+}
+.back-top {
+    color: @primary-color;
+    height: 34px;
+    width: 34px;
+    padding: 7px 9px;
+    border-radius: 4px;
+}
+.back-top:before {
+    content: "\f570";
+}

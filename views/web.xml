@@ -202,6 +202,15 @@
         </xpath>
     </template>
 
+    <template id="to_top"
+            inherit_id="web.webclient_bootstrap"
+            name="To top"
+            >
+        <xpath expr="//div[@class='wrapper']" position="after">
+            <div id="toTop" class="btn back-top" style="display: block;"/>
+        </xpath>
+    </template>
+
     <template id="menu_secondary_submenu"
               inherit_id="web.menu_secondary_submenu"
               name="App Drawer - Secondary Submenu"
