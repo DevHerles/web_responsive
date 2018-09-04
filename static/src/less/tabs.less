@@ -14,7 +14,7 @@
 }
 .tab-content {
     padding: 15px 15px 5px;
-    // background-color: @panel-background-color;
+    background-color: @tab-content-background-color !important;
     border-right: 1px solid @border-line-color;
     border-left: 1px solid @border-line-color;
     > .active {
@@ -59,4 +59,21 @@
             border-bottom: 1px solid @tab-content-background-color !important;
         }
     }
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background-color: @tab-content-background-color !important;
+  border-bottom-color: @tab-content-background-color !important;
+}
+.nav-tabs > li.active > a {
+  cursor: default;
+}
+.nav-tabs .open > a,
+.nav-tabs .open > a:focus,
+.nav-tabs .open > a:hover {
+  border-color: transparent;
+  background-color: inherit;
 }
