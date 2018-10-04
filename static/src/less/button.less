@@ -68,19 +68,19 @@
 
 .btn {
     text-transform: uppercase;
-    background-color: rgba(36, 41, 44, 0.5);
-    border-color: rgba(36, 41, 44, 0.5);
-    color: #fff;
+    background-color: @btn-background-color;
+    border-color: @btn-border-color;
+    color: @btn-color;
     outline: none;
     &.active,
     &:active {
         box-shadow: none;
-        border-color: @primary-color;
+        // border-color: @primary-color;
         background: @btn-active-background-color;
         color: @btn-active-color !important;
     }
     &:hover {
-        border-color: @btn-active-hover-color;
+        // border-color: @btn-active-hover-color;
     }
 }
 
@@ -99,10 +99,10 @@
 .open > .btn.dropdown-toggle.btn-default:focus,
 .open > .btn.dropdown-toggle.btn-default:active,
 .open > .btn.dropdown-toggle.btn-default:hover {
-    background-color: rgba(25, 28, 30, 0.5);
-    border-color: rgba(36, 41, 44, 0.5);
+    background-color: @btn-background-color; //rgba(25, 28, 30, 0.5);
+    border-color: @btn-border-color; //rgba(36, 41, 44, 0.5);
     outline: none;
-    color: #fff;
+    color: @secondary-color;
 }
 
 .btn.disabled,
