@@ -38,6 +38,9 @@
         color: @tertiary-color !important;
     } 
 }
+.o_form_view.o_form_readonly .o_form_uri:hover:first-line {
+  color: @secondary-color;
+}
 .o_form_view .o_group.o_inner_group.oe_subtotal_footer .oe_subtotal_footer_separator {
     border-top: 1px solid @border-line-color;
 }
@@ -52,8 +55,8 @@
             border-color: transparent;
             background-color: transparent;
             &:hover {
-                border: 1px solid @primary-color;
-                color: @button-hover-color !important;
+                //border: 1px solid @primary-color;
+                color: @secondary-color !important;
                 background-color: transparent;
             }
         }
