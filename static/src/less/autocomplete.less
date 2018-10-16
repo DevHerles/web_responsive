@@ -1,34 +1,26 @@
 .ui-autocomplete {
-    background: @panel-background-color;
+    background: @border-line-color;
     font-family: inherit;
     padding: 0px;
     .ui-state-focus {
         a {
             background-color: @primary-color !important;
-            color: @border-line-color !important;
         }
     }
     .ui-menu-item {
         > a {
-            // color: @autocomplete-menu-item-color;
-            &:hover {
-                color: @autocomplete-menu-item-hover-color !important;
-            }
-        }
-        &:hover {
-            // background: @autocomplete-menu-item-hover-background-color;
-            // color: @autocomplete-menu-item-hover-color !important;
-            background-color: @dropdown-menu-item-background-hover-color !important;
+            color: @title-color; 
         }
         &.o_m2o_dropdown_option {
             padding-left: 0px;
             color: @border-line-color;
             > a {
                 color: @orange !important;
-                &:hover {
-                    color: @border-line-color;
-                }
             }
         }
+	&.ui-state-focus > a,
+	&.ui-state-focus.o_m2o_dropdown_option > a {
+	    color: @border-line-color;
+	}
     }
 }
